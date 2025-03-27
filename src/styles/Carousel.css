@@ -1,0 +1,131 @@
+/* Container for the related products carousel */
+.related-products {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.related-products h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Carousel structure */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Carousel button styles */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Carousel container and slides */
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.product-slide {
+    margin-right: 15px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(1); /* Initial scale */
+}
+
+/* Hover effect for each product */
+.product-slide:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Image styles */
+.product-slide img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Carousel title and price */
+.carousel-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.carousel-price {
+    font-size: 1rem;
+    color: #f39c12; /* Yellow */
+    margin-top: 5px;
+}
+
+.view-details {
+    background-color: #f39c12;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.view-details:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+    }
+
+    .product-slide {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        width: 100%;
+    }
+
+    .product-slide {
+        width: 90%;
+    }
+}

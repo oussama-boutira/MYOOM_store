@@ -1,0 +1,120 @@
+header {
+  background-color: #000000;
+  padding:3px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ffd700;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 10px;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+
+  align-items: center;
+}
+
+header .logo {
+  width: 5%;
+ 
+}
+
+header div {
+  width: 50%;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.nav a:hover {
+  color: #ffd700;
+}
+
+.Login {
+  color: #ffd700;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Singup {
+  background-color: #ffd700;
+  color: #000000;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+/* //////////////////////// */
+
+@media (max-width: 768px) {
+  header {
+    padding: 3px 10px;
+    height: auto;
+    flex-wrap: wrap;
+
+  }
+
+  header .logo {
+    width: 15%;
+  }
+
+  header div {
+    width: 70%;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+  }
+
+  header .logo, header div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+
+  .nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+
+}

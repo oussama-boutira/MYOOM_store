@@ -1,0 +1,286 @@
+.header {
+  background-color: #000;
+  padding: 15px 20px;
+  border-bottom: 2px solid #FFD700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #FFD700;
+}
+
+/* Icônes */
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #FFD700;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  background: #ccc;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #0056b3;
+}
+
+.cancel-btn:hover {
+  background: #999;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icons {
+    margin-top: 10px;
+  }
+}
+
+
+  /* profil2 */
+  .profil-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profil-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .mainProfil {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profil-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin-right: 20px;
+  }
+  
+  .info {
+    flex-grow: 1;
+  }
+  
+  .edit-info {
+    display: inline-block;
+    margin-top: 8px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .edit-info:hover {
+    text-decoration: underline;
+  }
+  
+  .logout-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .logout-btn:hover {
+    background: #e63939;
+  }
+  
+  .historique {
+    margin-top: 20px;
+  }
+  
+  .historique h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .historique-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .historique-item {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .produit {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+  
+  .details {
+    flex-grow: 1;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #28a745;
+  }
+
+  @media (max-width: 768px) {
+    .profil-container {
+      padding: 15px;
+      margin: 20px auto;
+    }
+  
+    .profil-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .mainProfil {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+  
+    .profil-pic {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    .historique-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .produit {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profil-container {
+      width: 95%;
+    }
+  }
+  

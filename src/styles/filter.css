@@ -1,0 +1,62 @@
+
+.categories {
+    background-color: rgba(243, 243, 243 ,0.985);
+    min-width: 200px;
+    align-items: center;
+    margin: 15px;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.18);
+}
+
+.categories hr{
+    width: 90%;
+    height: 1px;
+    background-color: rgb(183, 164, 164);
+}
+
+.categories h3 , .categories:first-child{
+    text-align: center;
+}
+aside .categories:first-child div label{
+    font-size: smaller;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.categories div label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+.categories div label span{
+    font-size:small;
+    font-weight: 600;
+    color: black;
+    margin-right: 10px;
+}
+aside .categories:last-child div label input{
+    width: 18px;
+}
+
+
+/* /////////////////////////////// */
+
+
+@media (max-width: 768px) {
+    .categories {
+      min-width: 150px;
+      margin: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .categories {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .categories div label {
+      font-size: 0.8rem;
+    }
+  }

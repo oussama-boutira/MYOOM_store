@@ -1,0 +1,93 @@
+/* Conteneur principal */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff; /* Blanc */
+}
+
+/* Formulaire */
+.signup-form {
+  background-color: #333333; /* Gris foncé */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+}
+
+/* Titre */
+.signup-form h2 {
+  color: #FFD700; /* Jaune */
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.signup-form label {
+  display: block;
+  text-align: left;
+  color: #ffffff; /* Blanc */
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Champs input */
+.signup-form input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #FFD700; /* Jaune */
+  border-radius: 5px;
+  background-color: #ffffff; /* Blanc */
+  color: #000000; /* Noir */
+}
+
+/* Bouton */
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FFD700; /* Jaune */
+  color: #000000; /* Noir */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-form button:hover {
+  background-color: #e6c200; /* Jaune foncé */
+}
+
+/* Texte de connexion */
+.login-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffffff; /* Blanc */
+}
+
+.LinkLS {
+  color: #FFD700; /* Jaune */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* /////////////////////// */
+
+@media (max-width: 480px) {
+  .signup-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .signup-form input {
+    width: 85%;
+    padding: 8px;
+  }
+}

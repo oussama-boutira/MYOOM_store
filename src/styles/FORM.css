@@ -1,0 +1,78 @@
+.panierForm {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: #333333; /* Gris foncé */
+    border-radius: 8px;
+    color: #FFFFFF; /* Blanc */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Style des labels */
+.panierForm label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Style des inputs, radio, et textarea */
+  .panierForm  input,.panierForm  select,.panierForm  textarea {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #FFD700; /* Jaune */
+    border-radius: 5px;
+    background: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+    font-size: 16px;
+  }
+  
+  .panierForm  input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  /* Style du bouton */
+  .panierForm  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #FFD700; /* Jaune */
+    color: #000000; /* Noir */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .panierForm  button:hover {
+    background: #FFC000; /* Un jaune légèrement plus foncé */
+  }
+  
+  /* Style des messages d'erreur */
+  .panierForm  p {
+    color: #FFD700; /* Jaune */
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  /* /////////////////////////////////// */
+
+  @media (max-width: 480px) {
+    .panierForm, .ajouterForm {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .panierForm input, 
+    .panierForm select, 
+    .panierForm textarea,
+    .ajouterForm input,
+    .ajouterForm select,
+    .ajouterForm textarea {
+      width: 92%;
+      font-size: 14px;
+    }
+  }
