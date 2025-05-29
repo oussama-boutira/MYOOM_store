@@ -1,0 +1,231 @@
+/* Container for the related products carousel */
+.related-products {
+    padding: 40px 20px;
+    background-color: #000000;
+    margin-top: 40px;
+}
+
+.related-products h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.related-products h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+}
+
+/* Carousel structure */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Carousel button styles */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+    color: #FFD700;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.prev:hover, .next:hover {
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.1));
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev:disabled, .next:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Carousel container and slides */
+.carousel-container {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-slide {
+    flex: 0 0 calc(33.333% - 20px);
+    text-align: center;
+    background: linear-gradient(145deg, #333333, #2a2a2a);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 215, 0, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.product-slide:hover::before {
+    left: 100%;
+}
+
+.product-slide:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.15);
+}
+
+.carousel-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.carousel-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 15px 0 10px;
+    min-height: 2.4em;
+    line-height: 1.2;
+}
+
+.carousel-price {
+    font-size: 1.3rem;
+    color: #FFD700;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.view-details {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .carousel-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-slide {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .related-products {
+        padding: 30px 15px;
+    }
+
+    .related-products h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-container {
+        gap: 15px;
+    }
+
+    .product-slide {
+        padding: 15px;
+    }
+
+    .carousel-img {
+        height: 180px;
+    }
+
+    .carousel-title {
+        font-size: 1.1rem;
+    }
+
+    .carousel-price {
+        font-size: 1.2rem;
+    }
+
+    .view-details {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-slide {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .carousel-img {
+        height: 160px;
+    }
+
+    .prev, .next {
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+}

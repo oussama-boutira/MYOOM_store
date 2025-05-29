@@ -1,0 +1,166 @@
+.administration {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #000000;
+}
+
+.administration h1 {
+  color: #FFD700;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.admin-nav button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #333333;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.admin-nav button:hover {
+  background-color: #FFD700;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.admin-nav button.active {
+  background-color: #FFD700;
+  color: #000000;
+}
+
+.admin-content {
+  background: #333333;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* Orders Table Styles */
+.orders-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.orders-table h2 {
+  color: #FFD700;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #FFD700;
+  color: #FFFFFF;
+}
+
+.orders-table th {
+  background-color: #000000;
+  font-weight: 600;
+  color: #FFD700;
+}
+
+.orders-table tr:hover {
+  background-color: #000000;
+}
+
+.orders-table select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #FFD700;
+  background-color: #333333;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.orders-table button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #FFD700;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.orders-table button:hover {
+  background-color: #FFD700;
+  opacity: 0.9;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #FFD700;
+  font-size: 1.1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .administration {
+    padding: 1rem;
+  }
+
+  .administration h1 {
+    font-size: 2rem;
+  }
+
+  .admin-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-nav button {
+    width: 100%;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .orders-table select,
+  .orders-table button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .administration h1 {
+    font-size: 1.8rem;
+  }
+
+  .orders-table {
+    font-size: 0.9rem;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 0.6rem;
+  }
+}
